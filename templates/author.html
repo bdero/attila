@@ -76,18 +76,27 @@
                         <p class="post-author-about">{{AUTHORS_BIO[author.name.lower()].bio}}</p>
                     {% endif %}
                     {% if AUTHORS_BIO[author.name.lower()].location %}
-                        <span class="post-author-location"><i class="ic ic-location"></i> {{AUTHORS_BIO[author.name.lower()].location}}</span>
+                        <span class="post-author-location"><i class="fa fa-location"></i> {{AUTHORS_BIO[author.name.lower()].location}}</span>
                     {% endif %}
                     {% if AUTHORS_BIO[author.name.lower()].website %}
-                        <span class="post-author-website"><a href="{{AUTHORS_BIO[author.name.lower()].website}}"><i class="ic ic-link"></i> Website</a></span>
+                        <span class="post-author-website"><a href="{{AUTHORS_BIO[author.name.lower()].website}}"><i class="fa fa-link"></i> Website</a></span>
+                    {% endif %}
+                    {% if AUTHORS_BIO[author.name.lower()].github %}
+                        <span class="post-author-github"><a target="_blank" href="https://github.com/{{AUTHORS_BIO[author.name.lower()].github}}"><i class="fa fa-github"></i> GitHub</a></span>
+                    {% endif %}
+                    {% if AUTHORS_BIO[author.name.lower()].keybase %}
+                        <span class="post-author-keybase"><a target="_blank" href="https://keybase.io/{{AUTHORS_BIO[author.name.lower()].keybase}}"><i class="fa fa-key"></i> Keybase</a></span>
+                    {% endif %}
+                    {% if AUTHORS_BIO[author.name.lower()].linkedin %}
+                        <span class="post-author-linkedin"><a target="_blank" href="https://www.linkedin.com/in/{{AUTHORS_BIO[author.name.lower()].linkedin}}"><i class="fa fa-linkedin"></i> LinkedIn</a></span>
                     {% endif %}
                     {% if AUTHORS_BIO[author.name.lower()].twitter %}
-                        <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/{{AUTHORS_BIO[author.name.lower()].twitter}}"><i class="ic ic-twitter"></i> Twitter</a></span>
+                        <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/{{AUTHORS_BIO[author.name.lower()].twitter}}"><i class="fa fa-twitter"></i> Twitter</a></span>
                     {% endif %}
                     {% if AUTHORS_BIO[author.name.lower()].facebook %}
-                        <span class="post-author-facebook"><a target="_blank" href="https://facebook.com/{{AUTHORS_BIO[author.name.lower()].facebook}}"><i class="ic ic-facebook"></i> Facebook</a></span>
+                        <span class="post-author-facebook"><a target="_blank" href="https://facebook.com/{{AUTHORS_BIO[author.name.lower()].facebook}}"><i class="fa fa-facebook"></i> Facebook</a></span>
                     {% endif %}
-                        <span class="post-author-stats"><i class="ic ic-posts"></i> {{ articles|count }} {% if articles|count > 1 %} posts {% else %} post {% endif %}</span>
+                    <span class="post-author-stats"><i class="fa fa-paper-plane"></i> {{ articles|count }} {% if articles|count > 1 %} posts {% else %} post {% endif %}</span>
                 </div>
                 <div class="clear"></div>
             </aside>
